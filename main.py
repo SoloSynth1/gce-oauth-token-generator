@@ -17,7 +17,7 @@ def main(receiving_service_url):
 
     # Fetch the token
     if token_response.status == 200:
-        jwt = token_response.data
+        jwt = token_response.data.decode("utf-8")
         return jwt
     return None
 
